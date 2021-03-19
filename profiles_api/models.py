@@ -16,7 +16,7 @@ class UserProfileManager(BaseUserManager):
         user.set_password(password) # set_password by default encrypt data.
         user.save(using=self._db) # save obj in django db.
 
-        return users
+        return user
 
     def create_superuser(self, email, name, password):
         """Create and save a new supersuer with given details."""
